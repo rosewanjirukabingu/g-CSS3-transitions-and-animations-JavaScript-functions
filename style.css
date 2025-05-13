@@ -1,0 +1,152 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.preference-panel {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .preference-panel {
+    background-color: #333;
+}
+
+.toggle-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-group label {
+    margin-right: 10px;
+    width: 150px;
+}
+
+.color-picker {
+    display: flex;
+    align-items: center;
+}
+
+.color-picker label {
+    margin-right: 10px;
+    width: 150px;
+}
+
+.demo-area {
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .demo-area {
+    background-color: #333;
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4a6baf;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Box animation styles */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #4a6baf;
+    margin: 30px auto;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+/* Animation when active */
+.box.active {
+    animation: pulse 1.5s infinite;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 107, 175, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(74, 107, 175, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 107, 175, 0);
+    }
+}
+
+/* Image animation */
+.floating-img {
+    margin-top: 30px;
+    border-radius: 8px;
+    width: 50%;
+    height: 30%;
+    transition: all 0.5s ease;
+}
+
+.floating-img.active {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Fade-in animation for page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeIn 0.8s ease-out;
+}

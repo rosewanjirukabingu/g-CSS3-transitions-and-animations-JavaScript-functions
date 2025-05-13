@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animations Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Animation Preferences</h1>
+        
+        <div class="preference-panel">
+            <div class="toggle-group">
+                <label for="animation-toggle">Enable Animations:</label>
+                <input type="checkbox" id="animation-toggle" checked>
+            </div>
+            
+            <div class="toggle-group">
+                <label for="theme-toggle">Dark Mode:</label>
+                <input type="checkbox" id="theme-toggle">
+            </div>
+            
+            <div class="color-picker">
+                <label for="accent-color">Choose Accent Color:</label>
+                <input type="color" id="accent-color" value="#4a6baf">
+            </div>
+        </div>
+        
+        <div class="demo-area">
+            <button id="animate-btn" class="btn">Click Me!</button>
+            <div id="animated-box" class="box"></div>
+            <img id="animated-img" class="floating-img" src="art3.jpg" alt="Demo image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
